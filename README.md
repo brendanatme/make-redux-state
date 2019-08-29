@@ -28,9 +28,7 @@ const options = {
         .then((data) => {
           dispatch({
             type: ActionTypes.onLoadSucceeded,
-            payload: {
-              data,
-            },
+            payload: { data },
           });
         })
         .catch((error) => {
