@@ -1,6 +1,6 @@
 {
   "name": "@brendanatme/make-redux-state",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Take the boilerplate out of redux.",
   "main": "index.js",
   "scripts": {
