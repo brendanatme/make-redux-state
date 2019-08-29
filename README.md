@@ -24,7 +24,7 @@ const options = {
       dispatch({ type: ActionTypes.clear });
       
       myApi
-        .fetchData(myActionArgs)
+        .fetchData(...myActionArgs)
         .then((data) => {
           dispatch({
             type: ActionTypes.onLoadSucceeded,
@@ -76,11 +76,11 @@ import React from 'react';
 import { myState } from './path/to/my-state';
 
 const MyComponent = ({
-  myState,
+  myStateSlice, // myState.key
 }) => (
   <div>
-    {myState.loaded ? (
-      <span>{JSON.stringify(myState.data)}</span>
+    {myStateSlice.loaded ? (
+      <span>{JSON.stringify(myStateSlice.data)}</span>
     ) : (
       <span>Loading...</span>
     )}
@@ -100,7 +100,7 @@ import { myState } from './path/to/my-state';
 class MyContainer extends React.Component {
   componentDidMount() {
     const args = {};
-    this.props.myCustomFetch('any', args);
+    this.props.myCustomFetch('any', args, 'you', 'want');
   }
 
   render() {
