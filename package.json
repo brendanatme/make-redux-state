@@ -1,0 +1,45 @@
+{
+  "name": "@brendanatme/make-redux-state",
+  "version": "0.0.0",
+  "description": "Take the boilerplate out of redux.",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run test",
+    "build": "babel src -d dist",
+    "release": "node scripts/release.js",
+    "test": "mocha -- --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendanatme/make-redux-state.git"
+  },
+  "author": "brendanatme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brendanatme/make-redux-state/issues"
+  },
+  "homepage": "https://github.com/brendanatme/make-redux-state#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@brendanatme/js-helpers": "^1.0.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "reselect": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@brendanatme/js-helpers": "^1.0.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "reselect": "^4.0.0"
+  }
+}
